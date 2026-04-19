@@ -2,20 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FantasyForge Studio | Legal Directory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FantasyForge Studio | Legal Portal</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #f4f4f4; }
-        .card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
-        a { display: block; margin: 15px 0; color: #007bff; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
-        a:hover { text-decoration: underline; }
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            display: flex; justify-content: center; align-items: center; 
+            height: 100vh; margin: 0; 
+            background: #0f172a; /* Deep dark blue background */
+            color: white;
+        }
+        .card { 
+            background: #1e293b; 
+            padding: 50px; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(0, 123, 255, 0.2); 
+            text-align: center;
+            border: 1px solid #334155;
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        img { 
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        img:hover { transform: scale(1.1); }
+        h1 { font-size: 1.8rem; letter-spacing: 1px; margin-bottom: 30px; color: #f8fafc; }
+        .btn { 
+            display: block; 
+            margin: 15px 0; 
+            padding: 12px 25px;
+            color: #38bdf8; 
+            text-decoration: none; 
+            font-weight: 600; 
+            border: 1px solid #38bdf8;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover { 
+            background: #38bdf8; 
+            color: #0f172a; 
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+        }
     </style>
 </head>
 <body>
     <div class="card">
-        <img src="FantasyForgeStudioLogo.png" width="100" alt="Logo">
-        <h1>Company Documents</h1>
-        <a href="terms.html">Master Terms of Service</a>
-        <a href="privacy.html">Master Privacy Policy</a>
+        <img src="FantasyForgeStudioLogo.png" width="120" alt="FantasyForge Logo">
+        <h1>MASTER DOCUMENTS</h1>
+        <a href="terms.html" class="btn">TERMS OF SERVICE</a>
+        <a href="privacy.html" class="btn">PRIVACY POLICY</a>
     </div>
 </body>
-</html> 
+</html>
