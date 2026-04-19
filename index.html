@@ -3,59 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FantasyForge Studio | Legal Portal</title>
+    <title>FantasyForge Studio | Master Documents</title>
     <style>
+        /* Base Styling - Matching the FantasyForge Immersive Theme */
         body { 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            display: flex; justify-content: center; align-items: center; 
-            height: 100vh; margin: 0; 
-            background: #0f172a; /* Deep dark blue background */
-            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            height: 100vh; 
+            display: flex; justify-content: center; align-items: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            color: #f8fafc;
+            overflow: hidden;
         }
+
+        /* The "Glass" Card Effect */
         .card { 
-            background: #1e293b; 
-            padding: 50px; 
-            border-radius: 16px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(0, 123, 255, 0.2); 
+            background: rgba(30, 41, 59, 0.7); 
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 60px 40px; 
+            border-radius: 24px; 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
             text-align: center;
-            border: 1px solid #334155;
-            animation: fadeIn 1s ease-out;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 400px;
+            width: 90%;
+            animation: slideUp 0.8s ease-out;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* Logo & Branding */
         img { 
-            filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4));
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        img:hover { transform: scale(1.1); }
-        h1 { font-size: 1.8rem; letter-spacing: 1px; margin-bottom: 30px; color: #f8fafc; }
+        img:hover { transform: scale(1.1) rotate(2deg); }
+
+        h1 { 
+            font-size: 1.5rem; 
+            font-weight: 800; 
+            letter-spacing: 3px; 
+            margin-bottom: 40px; 
+            text-transform: uppercase;
+            color: #cbd5e1;
+        }
+
+        /* Immersive Buttons */
         .btn { 
             display: block; 
             margin: 15px 0; 
-            padding: 12px 25px;
+            padding: 14px;
             color: #38bdf8; 
             text-decoration: none; 
-            font-weight: 600; 
-            border: 1px solid #38bdf8;
-            border-radius: 8px;
+            font-weight: 700; 
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border: 1px solid rgba(56, 189, 248, 0.5);
+            border-radius: 12px;
+            background: rgba(56, 189, 248, 0.05);
             transition: all 0.3s ease;
         }
+
         .btn:hover { 
             background: #38bdf8; 
             color: #0f172a; 
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.7rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
+
     <div class="card">
-        <img src="FantasyForgeStudioLogo.png" width="120" alt="FantasyForge Logo">
-        <h1>MASTER DOCUMENTS</h1>
+        <!-- Using the relative path to your repo logo -->
+        <img src="FantasyForgeStudioLogo.png" width="140" alt="FantasyForge Studio">
+        
+        <h1>Master Documents</h1>
+        
         <a href="terms.html" class="btn">TERMS OF SERVICE</a>
         <a href="privacy.html" class="btn">PRIVACY POLICY</a>
+
+        <div class="footer">
+            © 2026 FantasyForge Studio, LLC
+        </div>
     </div>
+
 </body>
 </html>
